@@ -1,4 +1,6 @@
 let addValue = 1;
+let cart = [];
+let gameKey = 0;
 
 const qs = (item) => document.querySelector(item);
 const qsa = (item) => document.querySelectorAll(item) ;
@@ -16,6 +18,7 @@ gamesJson.map((item, index) => {
         e.preventDefault();  
         let key = e.target.closest('.game').getAttribute('data-key');
         addValue = 1;
+        gameKey = key;
         
         qs('.game-window-img-body img').src = gamesJson[key].img;
         qs('.game-window-body-desc h1').innerHTML = gamesJson[key].name;
@@ -67,4 +70,14 @@ qsa('.game-plataform').forEach((plataforms, plataformIndex) => {
         qs('.game-plataform.selected').classList.remove('selected');
         plataforms.classList.add('selected');
     })
+});
+
+qs('.game-window-btn-foward').addEventListener('click', () => {
+    let plataform = qs('.game-plataform.selected').getAttribute('data-key');
+    cart.push({
+        id: gamesJson[gameKey].id,
+        plataform,
+        amount: addValue
+    });
+    closeWindow();
 });
