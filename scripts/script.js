@@ -49,3 +49,22 @@ function closeWindow() {
 }
 qs('.game-window-btn-back').addEventListener('click', closeWindow);
 
+
+qs('.add-btn').addEventListener('click', () => {
+    addValue ++;
+    qs('.value-add').innerHTML = addValue;
+});
+
+qs('.remove-btn').addEventListener('click', () => {
+    if (addValue > 1) {
+        addValue --;
+        qs('.value-add').innerHTML = addValue;
+    }
+});
+
+qsa('.game-plataform').forEach((plataforms, plataformIndex) => {
+    plataforms.addEventListener('click', (e) => {
+        qs('.game-plataform.selected').classList.remove('selected');
+        plataforms.classList.add('selected');
+    })
+});

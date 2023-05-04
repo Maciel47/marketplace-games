@@ -202,8 +202,6 @@ a {
     text-decoration: none;
     text-rendering: geometricprecision;    
     transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
-    user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
@@ -261,7 +259,7 @@ a {
     text-decoration: none;
     text-rendering: geometricprecision;
     transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
-    user-select: none;
+    -webkit-user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: baseline;
