@@ -1,0 +1,301 @@
+* {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffffce;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.game-model {
+    display: none;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.game:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.788);
+    box-shadow: 5px -5px 3px black;
+    cursor: pointer;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    border-radius: 10%;
+    box-shadow: 10px 10px 20px black;
+}
+
+.game-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.game-description-name, .game-description-year, .game-description-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 0px; 
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+.game-btn {
+    color: white;
+    background-color: #1967c0;
+    border: 1px solid #1967c0;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px black;
+}
+
+.game-btn:hover {
+    color: white;
+    background-color: #1967c0;
+    cursor: pointer;
+}
+
+.game-window {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0000006e;
+    display: none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.game-window-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 2%;
+}
+
+.game-window-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.game-window-body-desc h1, .game-window-description-year {
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.774);
+}
+
+.game-description-purchase {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-window-description-price, .game-window-description-add {
+    display: flex;
+    color: rgba(0, 0, 0, 0.774);
+}
+
+.game-window-description-add button, .game-window-description-add div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+.game-window-description-add button:hover {
+    cursor: pointer;
+}
+
+.game-plataforms {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+    color: rgba(0, 0, 0, 0.774);
+    border-radius: 30px 30px 30px 30px;
+}
+
+.game-plataform {
+    display: flex;
+    padding: 10px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: e0e0e0;
+}
+
+.game-plataform:hover {
+    color: #FFF;
+    background-color: #1967c0;
+    cursor: pointer;
+}
+
+.selected {
+    color: #FFF;
+    background-color: #1967c0;
+}
+
+.game-window-description-name, .game-window-description-year {
+    color: rgba(0, 0, 0, 0.774);
+}
+
+.game-window-btn {
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.game-window-btn-back {
+    appearance: none;
+    background-color: #57575791;
+    border-width: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Clarkson,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    padding: 1.5em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;    
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.game-window-btn-back:before {
+    animation: opacityFallbackOut .5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: #971e1e;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.game-window-btn-back:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.game-window-btn-back:after {
+    background-color: #000000;
+}
+
+.game-window-btn-back span {
+    z-index: 1;
+    position: relative;
+}
+
+.game-window-btn-foward {
+    appearance: none;
+    background-color: #1b8343;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    padding: 1.5em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.game-window-btn-foward:before {
+    animation: opacityFallbackOut .5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: #1967c0;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.game-window-btn-foward:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.game-window-btn-foward:after {
+    background-color: #000000;
+}
+
+.game-window-btn-foward span {
+    z-index: 1;
+    position: relative;
+}
+
